@@ -1,0 +1,226 @@
+{
+  "nodes": [
+    {
+      "id": "kg-custom-mw0a6vzv",
+      "code": "SYL-TOM",
+      "label": "DocScanner 23 Oct 2026 9 33 pm",
+      "domain": "Core Mechanical",
+      "parent": "tom",
+      "bloom": "L3 Numerical",
+      "formula": "Gear pair: N₁T₁=N₂T₂ · ωₙ=√(k/m) · r=ω/ωₙ · X/F₀/k=1/√[(1−r²)²+(2ζr)²]",
+      "variables": "SI units extracted from uploaded syllabus",
+      "prereqs": [
+        "kg-mech-eq"
+      ],
+      "concept": "Use geometry for position, differentiate for velocity and acceleration, then apply force/moment balance for dynamic loads.",
+      "trap": "A speed ratio does not tell direction. A flywheel smooths cyclic speed fluctuation; a governor regulates mean speed as load changes. Do not ignore damping near resonance.",
+      "source": "DocScanner 23 Oct 2026 9-33 pm.pdf"
+    }
+  ],
+  "edges": [
+    {
+      "from": "kg-mech-eq",
+      "to": "kg-custom-mw0a6vzv",
+      "relation": "prerequisite_for"
+    }
+  ],
+  "questions": [
+    {
+      "id": "PDF-mw0a6vvn-1",
+      "category": "mechanical",
+      "role": "Uploaded PDF Pack",
+      "topic": "Kinematics of Machines · Mobility",
+      "difficulty": "Basic",
+      "text": "A planar mechanism has 6 links and 7 revolute lower pairs (J₁ = 7, J₂ = 0). Using Gruebler’s criterion, what is its mobility (DOF)?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": 1,
+      "explain": "M = 3(L − 1) − 2J₁ − J₂ = 3(6 − 1) − 2(7) − 0 = 15 − 14 = 1.",
+      "source": "DocScanner 23 Oct 2026 9-33 pm.pdf (Uploaded PDF Pack)",
+      "weightClass": "short",
+      "marks": 2
+    },
+    {
+      "id": "PDF-mw0a6vvn-2",
+      "category": "mechanical",
+      "role": "Uploaded PDF Pack",
+      "topic": "Kinematics of Machines · Grashof Law",
+      "difficulty": "Intermediate",
+      "text": "A four-bar chain has link lengths 25 mm, 55 mm, 60 mm, and 70 mm. If the 25 mm link is fixed, what mechanism is obtained?",
+      "options": [
+        "Double-rocker",
+        "Double-crank (drag-link)",
+        "Crank-rocker",
+        "Triple-rocker"
+      ],
+      "answer": 1,
+      "explain": "S + L = 25 + 70 = 95 mm ≤ P + Q = 55 + 60 = 115 mm (Grashof satisfied). Fixing the shortest link S produces a double-crank mechanism.",
+      "source": "DocScanner 23 Oct 2026 9-33 pm.pdf (Uploaded PDF Pack)",
+      "weightClass": "problem",
+      "marks": 4
+    },
+    {
+      "id": "PDF-mw0a6vvn-3",
+      "category": "mechanical",
+      "role": "Uploaded PDF Pack",
+      "topic": "Kinematics of Machines · Quick Return",
+      "difficulty": "Intermediate",
+      "text": "In a crank and slotted lever quick-return mechanism, the crank sweeps 240° during the cutting stroke. What is the ratio of cutting time to return time?",
+      "options": [
+        "1.5",
+        "2.0",
+        "2.5",
+        "3.0"
+      ],
+      "answer": 1,
+      "explain": "Return stroke angle β = 360° − 240° = 120°. Time ratio = α / β = 240° / 120° = 2.0.",
+      "source": "DocScanner 23 Oct 2026 9-33 pm.pdf (Uploaded PDF Pack)",
+      "weightClass": "problem",
+      "marks": 4
+    },
+    {
+      "id": "PDF-mw0a6vvn-4",
+      "category": "mechanical",
+      "role": "Uploaded PDF Pack",
+      "topic": "Kinematics of Machines · Gear Trains",
+      "difficulty": "Basic",
+      "text": "A 20-tooth pinion rotating at 1,200 rpm meshes externally with an 80-tooth gear. What is the driven gear speed?",
+      "options": [
+        "150 rpm",
+        "300 rpm",
+        "400 rpm",
+        "600 rpm"
+      ],
+      "answer": 1,
+      "explain": "N₂ = N₁ × (T₁ / T₂) = 1200 × (20 / 80) = 300 rpm (opposite direction).",
+      "source": "DocScanner 23 Oct 2026 9-33 pm.pdf (Uploaded PDF Pack)",
+      "weightClass": "short",
+      "marks": 2
+    },
+    {
+      "role": "Uploaded PDF Pack",
+      "difficulty": "Advanced",
+      "topic": "Theory of Machines",
+      "text": "A 20-tooth gear rotating at 900 rpm drives a 60-tooth external gear. What is the driven gear speed and direction?",
+      "options": [
+        "150 rpm, same direction",
+        "300 rpm, opposite direction",
+        "300 rpm, same direction",
+        "2,700 rpm, opposite direction"
+      ],
+      "answer": 1,
+      "explain": "N₁T₁ = N₂T₂, so N₂ = 900 × 20/60 = 300 rpm. External gears turn in opposite directions.",
+      "id": "PDF-mw0a6vvn-5",
+      "source": "DocScanner 23 Oct 2026 9-33 pm.pdf · Aligned Practice"
+    },
+    {
+      "role": "Uploaded PDF Pack",
+      "difficulty": "Intermediate",
+      "topic": "Theory of Machines",
+      "text": "An external gear with 24 teeth at 600 rpm drives a 72-tooth gear. What is the output speed?",
+      "options": [
+        "200 rpm, opposite direction",
+        "200 rpm, same direction",
+        "1,800 rpm, opposite direction",
+        "1,800 rpm, same direction"
+      ],
+      "answer": 0,
+      "explain": "N₂=N₁T₁/T₂=600×24/72=200 rpm. A single external mesh reverses direction.",
+      "id": "PDF-mw0a6vvn-6",
+      "source": "DocScanner 23 Oct 2026 9-33 pm.pdf · Aligned Practice"
+    },
+    {
+      "id": "PDF-mw0a6vvn-7",
+      "category": "semester3",
+      "topic": "Theory of Machines · Mobility",
+      "role": "Uploaded PDF Pack",
+      "difficulty": "Intermediate",
+      "text": "A planar four-link chain has four revolute lower pairs. What is its generic mobility?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": 1,
+      "explain": "M=3(L−1)−2J₁=3(3)−2(4)=1.",
+      "source": "DocScanner 23 Oct 2026 9-33 pm.pdf · Aligned Practice",
+      "weightClass": "short",
+      "marks": 2
+    },
+    {
+      "id": "PDF-mw0a6vvn-8",
+      "category": "semester3",
+      "topic": "Theory of Machines · Grashof",
+      "role": "Uploaded PDF Pack",
+      "difficulty": "Intermediate",
+      "text": "Four links measure 20, 40, 50 and 70 mm. Which statement follows from Grashof’s criterion?",
+      "options": [
+        "No link can rotate fully",
+        "S+L=P+Q, a change-point boundary",
+        "It is non-Grashof",
+        "The mechanism has zero mobility"
+      ],
+      "answer": 1,
+      "explain": "Shortest+longest=20+70=90 and the other pair=40+50=90, so equality is the change-point boundary.",
+      "source": "DocScanner 23 Oct 2026 9-33 pm.pdf · Aligned Practice",
+      "weightClass": "short",
+      "marks": 2
+    },
+    {
+      "id": "PDF-mw0a6vvn-9",
+      "category": "semester3",
+      "topic": "Theory of Machines · Quick return",
+      "role": "Uploaded PDF Pack",
+      "difficulty": "Intermediate",
+      "text": "A crank sweeps 210° on the cutting stroke and 150° on return at constant speed. What is cutting/return time ratio?",
+      "options": [
+        "0.714",
+        "1.00",
+        "1.40",
+        "2.40"
+      ],
+      "answer": 2,
+      "explain": "Time is proportional to crank angle at constant angular speed: 210/150=1.40.",
+      "source": "DocScanner 23 Oct 2026 9-33 pm.pdf · Aligned Practice",
+      "weightClass": "problem",
+      "marks": 4
+    },
+    {
+      "id": "PDF-mw0a6vvn-10",
+      "category": "semester3",
+      "topic": "Theory of Machines · Relative motion",
+      "role": "Uploaded PDF Pack",
+      "difficulty": "Intermediate",
+      "text": "A point is 0.15 m from a fixed pivot rotating at 8 rad/s. Its normal acceleration is:",
+      "options": [
+        "1.2 m/s²",
+        "9.6 m/s²",
+        "64 m/s²",
+        "120 m/s²"
+      ],
+      "answer": 1,
+      "explain": "a_n=ω²r=8²×0.15=9.6 m/s², directed toward the pivot.",
+      "source": "DocScanner 23 Oct 2026 9-33 pm.pdf · Aligned Practice",
+      "weightClass": "problem",
+      "marks": 4
+    }
+  ],
+  "guides": [
+    {
+      "parent": "tom",
+      "group": "Uploaded PDF · Theory of Machines & Vibrations",
+      "title": "DocScanner 23 Oct 2026 9 33 pm — Extracted Study Guide",
+      "idea": "Use geometry for position, differentiate for velocity and acceleration, then apply force/moment balance for dynamic loads.",
+      "formula": "Gear pair: N₁T₁=N₂T₂ · ωₙ=√(k/m) · r=ω/ωₙ · X/F₀/k=1/√[(1−r²)²+(2ζr)²]",
+      "example": "Apply Gear pair: N₁T₁=N₂T₂ · ωₙ=√(k/m) · r=ω/ωₙ · X/F₀/k=1/√[(1−r²)²+(2ζr)²] with consistent SI units (N, m, s, Pa, J, K) and verify order of magnitude.",
+      "method": "1. Identify system boundary and givens from DocScanner 23 Oct 2026 9-33 pm.pdf. 2. Select governing equation (Gear pair: N₁T₁=N₂T₂ · ωₙ=√(k/m) · r=ω/ωₙ · X/F₀/k=1/√[(1−r²)²+(2ζr)²]). 3. Substitute in SI units and verify physical reasonableness.",
+      "trap": "A speed ratio does not tell direction. A flywheel smooths cyclic speed fluctuation; a governor regulates mean speed as load changes. Do not ignore damping near resonance.",
+      "source": "Uploaded PDF: DocScanner 23 Oct 2026 9-33 pm.pdf"
+    }
+  ]
+}
